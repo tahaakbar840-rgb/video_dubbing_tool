@@ -1,4 +1,13 @@
-﻿import os
+﻿import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+import streamlit as st
+from modules.audio_extractor import extract_audio
+from modules.transcriber import transcribe_audio
+from modules.translator import translate_segments
+from modules.subtitle_burner import generate_srt, burn_subtitles
+import os
 import streamlit as st
 from modules.audio_extractor import extract_audio
 from modules.transcriber import transcribe_audio
